@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/08/2026 às 21:01
+-- Tempo de geração: 19/08/2026 às 20:52
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,9 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `loja`
 --
-CREATE DATABASE IF NOT EXISTS loja;
-
-USE `loja`;
 
 -- --------------------------------------------------------
 
@@ -31,14 +28,12 @@ USE `loja`;
 --
 
 CREATE TABLE `filmes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `titulo` varchar(100) NOT NULL,
   `diretor` varchar(100) NOT NULL,
   `genero` varchar(50) NOT NULL,
   `ano` int(11) NOT NULL,
-  `duracao` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `ix_filmes_id` (`id`)
+  `duracao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -51,9 +46,7 @@ INSERT INTO `filmes` (`id`, `titulo`, `diretor`, `genero`, `ano`, `duracao`) VAL
 (3, 'Matrix', 'Lana Wachowski', 'Ação', 1999, 136),
 (4, 'Titanic', 'James Cameron', 'Romance', 1997, 194),
 (5, 'Os Vingadores', 'Joss Whedon', 'Ação', 2012, 143),
-(6, 'Pulp Fiction', 'Quentin Tarantino', 'Crime', 1994, 154),
-(7, 'O Senhor dos Anéis', 'Peter Jackson', 'Fantasia', 2001, 178),
-(8, 'Clube da Luta', 'David Fincher', 'Drama', 1999, 139);
+(6, 'Aurex', 'Eu', 'Sexo', 2093, 200);
 
 --
 -- Índices para tabelas despejadas
@@ -74,7 +67,7 @@ ALTER TABLE `filmes`
 -- AUTO_INCREMENT de tabela `filmes`
 --
 ALTER TABLE `filmes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
